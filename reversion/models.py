@@ -266,7 +266,7 @@ class Version(models.Model):
         unique_together = (
             ("db", "content_type", "object_id", "revision"),
         )
-        ordering = ("-pk",)
+        ordering = ("revision",)
 
 
 class _Str(models.Func):
